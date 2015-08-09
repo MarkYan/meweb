@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : PlainLeaf 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130902
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>課程介紹</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/JavaScript">
+$(document).ready(function(){ 
+$.get("2015info/2015info_bg.html",function(data){ //初始將a.html include div#iframe
+$("#iframe").html(data);
+}); 
+$(function(){
+$('.style li').click(function() {
+		// 找出 li 中的超連結 href(#id)
+	var $this = $(this),
+	_clickTab = $this.find('a').attr('target'); // 找到連結a中的href標籤值
+	if("-1"==_clickTab.search("http://")){ //不為http://執行下列程式
+		$.get(_clickTab,function(data){
+		$("#iframe").html(data);	
+		});
+		return false
+	}
+})
+})
+});
+</script>
+
+</head>
+<body>
+
+<div id="banner2">
+    <div id="header" class="container">
+        <div id="logo">
+            <h1>臺大機械系總整課程</h1>
+            <p>Capstone Course, Department of Mechanical Engineering</p>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html" accesskey="1" title="">首頁</a></li>
+                <li><a href="about_capstone.html" accesskey="3" title="">總整課程</a></li>
+                <li class="active"><a href="course.html" accesskey="4" title="">課程介紹</a></li>
+                <li><a href="project.html" accesskey="5" title="">成果展示</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="page_background">
+<div id="page" class="container"><a name="info"></a>
+	<div id="page_title">
+		<h1>2015 機械工程實務 課程介紹</h1>
+		<a href="course.html">返回年度選單</a>
+	</div>
+	
+	<div id="iframe">
+	<!--jquery 插入html 位址-->
+	</div>
+	
+	<div id="right-sidebar">
+		<section>
+			<h2>選單</h2>
+				<ul class="style">
+					<li>
+						<a href="" target="2015info/2015info_bg.html">課程背景介紹</a>
+					</li>
+					<li>	
+						<a href="" target="2015info/2015info_comp.html">設計規範</a>
+					</li>
+					<li>
+						<a href="" target="2015info/2015info_comp.html">期中查核評分標準</a>
+					</li>
+					<li>
+						<a href="" target="2015info/2015info_comp.html">期末驗收</a>
+					</li>
+					<li>
+						<a href="" target="2015info/2015info_comp.html">期末競賽</a>
+					</li>
+					<li>
+						<a href="2015project.html">成果展示</a>
+					</li>
+				</ul>
+		</section>
+	</div>
+	<div id="clear"></div>
+
+</div>
+</div>
+
+<div id="featured" class="container">
+	<div class="align-left">
+		<span class="fa fa-pencil-square-o"></span>	
+	</div>
+	<div class="align-right">
+		<h2>機械工程實物課程大綱</h2>
+		<p><br>針對機械系大三學生，安排上課、演講、總整課程(Capstone course)與參觀展覽等多元活動，使其能夠(一)瞭解機械工程現況及發展趨勢，包括尖端研究與產業實務，以利爾後生涯規劃；(二)認識機械工程與其他相關研究所之研究主題與方向，提供學生畢業後繼續深造之參考；(三)藉由工程實務與競賽，統合三年必選修課程所學之知識與設計、分析、製造與組裝測試完成機械作品，並參加期末競賽。 </p>
+	</div>
+</div>
+
+<div id="copyright" class="container">
+	<p>&copy; 台大機械系. All rights reserved. | Design by MarkYan and <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p></div>
+</body>
+</html>

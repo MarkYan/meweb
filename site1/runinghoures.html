@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>跑馬燈</title>
+<script language="javascript">
+var info = "Hi~ Mark~~";
+var interval = 200;
+var empty = "";
+var sin = 0;
+function Scroll(){
+	document.myForm.myText.value = info.substring(sin, info.length) + empty + info.substring(0, info.length);
+	sin++;
+	sin++;
+	if(in > len)
+		sin = 0;
+	window.setTimeout("Scroll();", interval);
+}
+</script> 
+</head>
+<body onLoad="javascript:Scroll()">
+	<form name="myForm">
+    	<input type="test" name="myText" size="30">
+    </form>
+</body>
+</html>

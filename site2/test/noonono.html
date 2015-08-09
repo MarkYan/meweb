@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery include HTML</title>
+
+ <script type="text/javascript" src="jquery-1.11.3.js"></script>
+  
+<script>
+$('.list-side li').click(function() {
+  // 找出 li 中的超連結 href(#id)
+ var $this = $(this),
+ _clickTab = $this.find('a').attr('target'); // 找到連結a中的targer標籤值
+ $.get(_clickTab,function(data){
+ $("#iframe").html(data); 
+ });
+})
+})
+});
+
+</script>
+
+<style type="text/css">
+body{
+	background-color: #CCC;
+}
+.list-side{
+	list-style-type: none;
+}
+#iframe {
+	border: 1px solid #FFF;
+	padding: 10px;
+	min-height: 800px;
+}
+.list-side li {
+	width: 180px;
+}
+.list-side li a {
+	cursor:pointer;
+	color: #333;
+	font-weight: bold;
+	background-color: #FFF;
+	display: block;
+	margin-bottom: 1px;
+	padding-left: 5px;
+}
+.mmuser {
+	width: 100%;
+
+}
+.list-side li a:hover {
+	background-color: #666;
+	color: #FFF;
+}
+.sa{
+	width: 250px;
+}
+
+#sidebar {
+	vertical-align: top;
+}
+</style>
+</head>
+
+
+<body>
+<ul class="list-side">
+<li><a target="a.html" >about</a></li>
+<li><a target="b.html" >news</a></li>
+<li><a target="c.html" >product</a></li>
+<li><a href="http://ucmic.blogspot.com/" target="_blank" >contact</a></li>
+</ul>
+
+<div id="iframe">
+<!--jquery 插入html 位址-->
+</div>
+
+</body>
+</html>

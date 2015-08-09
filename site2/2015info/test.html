@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>show demo</title>
+</head>
+<body>
+   <!-- show element -->
+  <input type="button" id="btn1" value="showBtn"/> 
+   <!-- hide element -->
+  <input type="button" id="btn2" value="hideBtn"/>  
+  <!-- transfer element show and hide -->
+  <input type="button" id="btn3" value="switchBtn"/>  
+  <!-- add special effect -->
+  <input type="button" id="btn4" value="switchslowBtn"/>  
+  <!-- detailed description about the special effect -->
+  <input type="button" id="btn5" value="showBtnEff"/>
+  <!-- Block -->
+  <div id="showBlock" style="display:none;">
+    hi
+  </div>  
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script>
+  //show
+  $("#btn1").click(function () {
+    $("#showBlock").show();
+  });
+  
+  //hide
+  $("#btn2").click(function () {
+    $("#showBlock").hide();
+  });
+  
+  //transfer element show and hide
+  $("#btn3").click(function () {
+    $("#showBlock").toggle();
+  });
+  
+ //add special effect
+  $("#btn4").click(function () {
+    $("#showBlock").toggle("slow");
+  });
+  
+  //add more details effect
+  $("#btn5").click(function () {
+    $("#showBlock").show(1000, function() {
+      alert('Good Job!');
+    });
+  });
+</script> 
+</body>
+</html>

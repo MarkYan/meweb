@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>demo</title>
+<script type="text/javascript">
+var intervalID;
+var n = 11;
+
+function run(){
+	var t = document.getElementById("demo");
+	if(n != 1000){
+		n = n - 1;
+		t.innerHTML = n;
+	}
+	intervalID = window.setTimeout(run,1000);
+}
+
+function stop(){
+	window.clearTimeout(intervalID);
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="RUN" onClick="run();">
+<input type="button" value="STOP" onClick="stop();">
+<input type="button" value="RESET" onClick="n = 11;">
+<div id="demo" style="font-size: x-large;"></div>
+</body>
+</html>

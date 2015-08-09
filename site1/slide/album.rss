@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Homepage</title>
+   	<link>.</link>
+        <generator>jAlbum 12</generator>
+   		<description></description>
+        <jalbum:absolutePath></jalbum:absolutePath>
+        <item>
+            <title>DSC_0024</title>
+            <link>slides/DSC_0024.JPG</link>
+            <pubDate>Fri, 07 Aug 2015 23:12:26 +0800</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/DSC_0024.JPG" width="124" height="82"/>
+            <media:content type="image/jpeg" url="slides/DSC_0024.JPG" width="1631" height="1080"/>
+            <jalbum:exif originalDate="Fri, 05 Jun 2015 13:23:11 +0800" cameraMake="NIKON CORPORATION" cameraModel="NIKON D5100"/>
+            <guid isPermaLink="false">slides/DSC_0024.JPG</guid>
+        </item>
+        <item>
+            <title>IMG_0708</title>
+            <link>slides/IMG_0708.jpg</link>
+            <pubDate>Fri, 07 Aug 2015 23:12:26 +0800</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/IMG_0708.jpg" width="124" height="93"/>
+            <media:content type="image/jpeg" url="slides/IMG_0708.jpg" width="1440" height="1080"/>
+            <jalbum:exif originalDate="Fri, 01 May 2015 14:28:08 +0800" cameraMake="Apple" cameraModel="iPhone 6"/>
+            <guid isPermaLink="false">slides/IMG_0708.jpg</guid>
+        </item>
+        <item>
+            <title>IMG_1078</title>
+            <link>slides/IMG_1078.jpg</link>
+            <pubDate>Fri, 07 Aug 2015 23:12:26 +0800</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/IMG_1078.jpg" width="124" height="93"/>
+            <media:content type="image/jpeg" url="slides/IMG_1078.jpg" width="1440" height="1080"/>
+            <jalbum:exif originalDate="Wed, 03 Jun 2015 14:36:32 +0800" cameraMake="Apple" cameraModel="iPhone 6"/>
+            <guid isPermaLink="false">slides/IMG_1078.jpg</guid>
+        </item>
+    </channel>
+</rss>
