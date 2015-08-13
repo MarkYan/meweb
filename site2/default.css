@@ -545,3 +545,13 @@ h3.info{
 	padding-top: 5px;
 	padding-bottom: 10px;
 }
+
+ul.info li{
+	color: #ffffff;
+	padding-bottom: 10px;
+	list-style-type： disc;
+}
+
+ul.info{
+	list-style: disc;
+}

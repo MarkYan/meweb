@@ -22,6 +22,28 @@ Released   : 20130902
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
+<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/JavaScript">
+$(document).ready(function(){ 
+$.get("2015info/2015info_bg.html",function(data){ //初始將a.html include div#iframe
+$("#iframe").html(data);
+}); 
+$(function(){
+$('.style li').click(function() {
+		// 找出 li 中的超連結 href(#id)
+	var $this = $(this),
+	_clickTab = $this.find('a').attr('target'); // 找到連結a中的href標籤值
+	if("-1"==_clickTab.search("http://")){ //不為http://執行下列程式
+		$.get(_clickTab,function(data){
+		$("#iframe").html(data);	
+		});
+		return false
+	}
+})
+})
+});
+</script>
+
 </head>
 <body>
 
@@ -48,30 +70,28 @@ Released   : 20130902
 		<h1>2015 機械工程實務 成果展示</h1>
 		<a href="project.html">返回年度選單</a>
 	</div>
-	<div id="left-info">
-		<iframe id="frame" src="" marginwidth="0" marginheight="0" frameborder=0 scrolling=no width='100%' height='100%'></iframe>
+	<div id="iframe">
+	<!--jquery 插入html 位址-->
 	</div>
+	
 	<div id="right-sidebar">
 		<section>
 			<h2>選單</h2>
 				<ul class="style">
 					<li>
-						<a href="#info" onclick="document.getElementById('frame').src='2015info/2015info_bg.html'">課程背景介紹</a>
+						<a href="" target="2015info/2015info_bg.html">分組成果展示</a>
 					</li>
 					<li>	
-						<a href="#info" onclick="document.getElementById('frame').src='2015info/2015info_design.html'">設計規範</a>
+						<a href="" target="2015info/2015info_design.html">期中測試</a>
 					</li>
 					<li>
-						<a href="#info" onclick="document.getElementById('frame').src='2015info/2015info_mid.html'">期中查核評分標準</a>
+						<a href="" target="2015info/2015info_mid.html">期末測試</a>
 					</li>
 					<li>
-						<a href="#info" onclick="document.getElementById('frame').src='2015info/2015info_final.html'">期末驗收</a>
+						<a href="" target="2015info/2015info_final.html">期末競賽</a>
 					</li>
 					<li>
-						<a href="#info" onclick="document.getElementById('frame').src='2015info/2015info_comp.html'">期末競賽</a>
-					</li>
-					<li>
-						<a href="2015course.html">課程介紹</a>
+						<a href="2015course.html#info">前往課程介紹</a>
 					</li>
 				</ul>
 		</section>
